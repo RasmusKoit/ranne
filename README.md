@@ -46,6 +46,9 @@ Honest matrix — this is a personal project, maintained in the open:
 work broadly (it's *more* robust on watches that have the Telecom feature), but you are the
 test lab — open a PR adding your row, or an issue with what broke.
 
+Testing a OnePlus Watch 2? Follow **`docs/phase0-watch2.md`**: a step-by-step first test with
+pass conditions and the evidence to collect.
+
 ## Build & install
 
 Both apps build with free tooling and a free Apple ID (7-day re-sign cycle — see the guide):
