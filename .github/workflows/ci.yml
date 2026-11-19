@@ -36,12 +36,19 @@ jobs:
 
   ios-probe:
     name: Entitlement probe — build (unsigned, informational)
-    runs-on: macos-15
+    runs-on: macos-26
     # The probe was scaffolded without Xcode and needs an SDK with the accessory
     # frameworks (iOS 26.5+). A failure here must not block unrelated pull requests.
     continue-on-error: true
     steps:
       - uses: actions/checkout@v4
+      # The accessory frameworks need the iOS 26.5 SDK or later; pick the newest Xcode on the image.
+      - name: Select newest Xcode
+        run: |
+          ls -d /Applications/Xcode*.app
+          sudo xcode-select -s "$(ls -d /Applications/Xcode_*.app | sort -V | tail -1)"
+          xcodebuild -version
+          xcodebuild -showsdks | grep -i iphoneos
       - run: brew install xcodegen
       - name: Generate project
         working-directory: apps/ios-probe
