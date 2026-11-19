@@ -42,16 +42,14 @@ versus paid Apple Developer Program), and record both outcomes in
 
 ## Known limits of this scaffold
 
-It was written from Apple's documentation without access to Xcode, so it has **never
-been compiled**. Expect to fix small things:
+It is compiled in CI (unsigned, against the newest Xcode on the `macos-26` runner) but has
+**never been signed or run on a device**:
 
-- Apple's two guides name the transport handler's methods differently
-  (`dataEventHandler(event:)` in the protocol reference, `messageReceived(_:completion:)`
-  in the notification guide). `Transport/Transport.swift` uses the first.
 - The entitlement values are written as booleans. If Xcode's capability editor writes
   something else, trust Xcode.
-- xcodegen's `extensionkit-extension` target type is assumed for these extension
-  points.
+- Apple's notification guide and its `AccessoryTransportAppExtension` reference name the
+  transport handler's methods differently. The SDK wants `messageReceived(_:completion:)`
+  and `sessionInvalidated(error:)`; `dataEventHandler(event:)` is deprecated.
 
 Compile errors do not answer the H2 question. A signing or provisioning error does.
 

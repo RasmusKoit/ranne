@@ -13,9 +13,11 @@ struct TransportExtension: AccessoryTransportAppExtension {
 }
 
 final class TransportEventHandler: AccessoryTransportSession.EventHandler {
-    func dataEventHandler(event: AccessoryTransportSession.DataEvent) {
-        // No accessory to talk to in the probe; drop the data.
+    func messageReceived(_ message: TransportMessage,
+                         completion: @escaping @Sendable (AccessoryMessage.Result) -> Void) {
+        // No accessory to talk to in the probe.
+        completion(.failure(.transportUnavailable))
     }
 
-    func invalidationHandler(error: AccessoryTransportSession.Error?) {}
+    func sessionInvalidated(error: AccessoryTransportSession.Error?) {}
 }

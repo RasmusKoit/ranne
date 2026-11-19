@@ -17,7 +17,7 @@ struct DataProvider: AccessoryDataProvider {
     }
 }
 
-final class NotificationHandler: AccessoryNotificationsHandler {
+final class NotificationHandler: NotificationsForwarding.AccessoryNotificationsHandler {
     var session: NotificationsForwarding.Session?
 
     func didActivate(for session: NotificationsForwarding.Session) {
