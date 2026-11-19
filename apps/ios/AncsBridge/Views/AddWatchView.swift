@@ -47,8 +47,8 @@ struct AddWatchView: View {
                         stepCard(
                             number: 1,
                             icon: "arrow.down.app",
-                            title: "Install WearBridge on your watch",
-                            description: "Download the APK from GitHub Releases and install via ADB, or search for WearBridge on Google Play."
+                            title: "Install Ranne on your watch",
+                            description: "Build the watch app and install it over ADB. See docs/setup.md in the repository."
                         ) {
                             if let url = URL(string: "https://github.com/k97/AppleToWearOS/releases") {
                                 UIApplication.shared.open(url)
@@ -60,7 +60,7 @@ struct AddWatchView: View {
                         stepCard(
                             number: 2,
                             icon: "magnifyingglass",
-                            title: "Open WearBridge on the watch",
+                            title: "Open Ranne on the watch",
                             description: "Launch the app and tap Scan. Your iPhone will appear in the device list."
                         )
 

@@ -10,7 +10,8 @@ android {
     compileSdk = 36 // connect-client 1.1.0 requires compiling against API 36+
 
     defaultConfig {
-        applicationId = "com.wearos.ancsbridge"
+        // Install identity. The Kotlin package / namespace above stays com.wearos.ancsbridge.
+        applicationId = "dev.koit.ranne"
         minSdk = 33 // Wear OS 4
         targetSdk = 35
         versionCode = 1

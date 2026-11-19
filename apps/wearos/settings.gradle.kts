@@ -17,5 +17,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "WearOS-ANCS-Bridge"
+rootProject.name = "ranne"
 include(":app")

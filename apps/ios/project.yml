@@ -1,6 +1,6 @@
 name: AncsBridge
 options:
-  bundleIdPrefix: com.wearos
+  bundleIdPrefix: dev.koit
   deploymentTarget:
     iOS: "26.0"
 
@@ -15,12 +15,12 @@ targets:
     info:
       path: AncsBridge/Info-Generated.plist
       properties:
-        CFBundleDisplayName: "WearBridge"
+        CFBundleDisplayName: "Ranne"
         LSRequiresIPhoneOS: true
-        NSBluetoothAlwaysUsageDescription: "WearBridge needs Bluetooth to connect to your watch and forward notifications."
-        NSBluetoothPeripheralUsageDescription: "WearBridge needs Bluetooth to be discoverable by your watch."
-        NSHealthShareUsageDescription: "WearBridge writes your watch's heart rate, steps, sleep and workout data into Apple Health."
-        NSHealthUpdateUsageDescription: "WearBridge writes your watch's heart rate, steps, sleep and workout data into Apple Health."
+        NSBluetoothAlwaysUsageDescription: "Ranne needs Bluetooth to connect to your watch and forward notifications."
+        NSBluetoothPeripheralUsageDescription: "Ranne needs Bluetooth to be discoverable by your watch."
+        NSHealthShareUsageDescription: "Ranne writes your watch's heart rate, steps, sleep and workout data into Apple Health."
+        NSHealthUpdateUsageDescription: "Ranne writes your watch's heart rate, steps, sleep and workout data into Apple Health."
         UIBackgroundModes:
           - bluetooth-peripheral
         UILaunchScreen: {}
@@ -28,7 +28,7 @@ targets:
           - UIInterfaceOrientationPortrait
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.wearos.ancsbridge.companion
+        PRODUCT_BUNDLE_IDENTIFIER: dev.koit.ranne.companion
         MARKETING_VERSION: "1.0"
         CURRENT_PROJECT_VERSION: "1"
         SWIFT_VERSION: "5.9"

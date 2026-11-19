@@ -98,7 +98,7 @@ struct QuickReplySettingsView: View {
             } header: {
                 Text("Siri Shortcut")
             } footer: {
-                Text("When you decline a call with a reply on your watch, WearBridge sends the caller name and message to this Shortcut via Bluetooth.")
+                Text("When you decline a call with a reply on your watch, Ranne sends the caller name and message to this Shortcut via Bluetooth.")
             }
         }
         .navigationTitle("Quick Reply")
