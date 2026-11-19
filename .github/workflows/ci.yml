@@ -33,3 +33,19 @@ jobs:
       - name: Build
         working-directory: apps/ios
         run: xcodebuild -project AncsBridge.xcodeproj -scheme AncsBridge -destination "generic/platform=iOS" -configuration Debug CODE_SIGNING_ALLOWED=NO build | tail -20 && exit ${PIPESTATUS[0]}
+
+  ios-probe:
+    name: Entitlement probe — build (unsigned, informational)
+    runs-on: macos-15
+    # The probe was scaffolded without Xcode and needs an SDK with the accessory
+    # frameworks (iOS 26.5+). A failure here must not block unrelated pull requests.
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - run: brew install xcodegen
+      - name: Generate project
+        working-directory: apps/ios-probe
+        run: xcodegen generate
+      - name: Build
+        working-directory: apps/ios-probe
+        run: xcodebuild -project RanneProbe.xcodeproj -scheme RanneProbe -destination "generic/platform=iOS" -configuration Debug CODE_SIGNING_ALLOWED=NO build | tail -40 && exit ${PIPESTATUS[0]}
