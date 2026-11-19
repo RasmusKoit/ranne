@@ -24,5 +24,5 @@ final class SecurityEventHandler: AccessorySecuritySession.EventHandler {
         completion(.failure(.transportFailed))
     }
 
-    func sessionInvalidated(error: (any Error)?) {}
+    func sessionInvalidated(error: AccessorySecuritySession.Error?) {}
 }

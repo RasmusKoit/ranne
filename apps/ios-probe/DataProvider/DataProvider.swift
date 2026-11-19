@@ -36,7 +36,7 @@ final class NotificationHandler: NotificationsForwarding.AccessoryNotificationsH
 
     func removeAllNotifications() {}
 
-    func messageHandler(_ message: AccessoryMessage) {}
+    func messageHandler(_ message: TransportMessage) {}
 
     func didInvalidate() {
         session = nil
