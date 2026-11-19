@@ -47,7 +47,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     fun scanAndConnect() {
         if (_isScanning.value) return
         _isScanning.value = true
-        _scanStatus.value = "Looking for WearBridge app..."
+        _scanStatus.value = "Looking for the Ranne iPhone app..."
         discoveredAppleDevices.clear()
 
         scanJob = viewModelScope.launch {
@@ -56,7 +56,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             launch {
                 delay(10_000)
                 if (_isScanning.value && !found) {
-                    _scanStatus.value = "WearBridge app not found.\nOpen it on your iPhone."
+                    _scanStatus.value = "Ranne app not found.\nOpen it on your iPhone."
                     stopScan()
                 }
             }

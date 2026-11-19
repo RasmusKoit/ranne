@@ -77,7 +77,7 @@ struct SettingsView: View {
                 } header: {
                     Text("About")
                 } footer: {
-                    Text("WearBridge uses Apple's ANCS to forward notifications over Bluetooth. All data stays local.")
+                    Text("Ranne uses Apple's ANCS to forward notifications over Bluetooth. All data stays local.")
                 }
             }
             .navigationTitle("Settings")

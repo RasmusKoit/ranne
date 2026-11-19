@@ -70,7 +70,7 @@ fun HomeScreen(viewModel: MainViewModel, onPairNewDevice: () -> Unit) {
     ) {
         item {
             ListHeader {
-                Text("WearBridge")
+                Text("Ranne")
             }
         }
 
@@ -304,7 +304,7 @@ fun PairNewDeviceScreen(viewModel: MainViewModel, onDismiss: () -> Unit) {
                 modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp)
             ) {
                 Text(
-                    "Make sure the WearBridge companion app is open on your iPhone",
+                    "Make sure the Ranne companion app is open on your iPhone",
                     textAlign = TextAlign.Center,
                     fontSize = 12.sp,
                     color = Color(0xFF9CA3AF)

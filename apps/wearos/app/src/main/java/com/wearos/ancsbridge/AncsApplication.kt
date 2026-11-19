@@ -35,7 +35,7 @@ class AncsApplication : Application() {
         val channels = listOf(
             NotificationChannel(
                 CHANNEL_SERVICE,
-                "WearBridge Service",
+                "Ranne Service",
                 NotificationManager.IMPORTANCE_LOW
             ).apply {
                 description = "Background connection to iPhone"

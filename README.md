@@ -1,6 +1,10 @@
-# watch-bridge
+# Ranne
 
-[![CI](https://github.com/DamianDzi/watch-bridge/actions/workflows/ci.yml/badge.svg)](https://github.com/DamianDzi/watch-bridge/actions/workflows/ci.yml)
+[![CI](https://github.com/RasmusKoit/ranne/actions/workflows/ci.yml/badge.svg)](https://github.com/RasmusKoit/ranne/actions/workflows/ci.yml)
+
+> Ranne ("wrist" in Estonian) is a fork of [watch-bridge](https://github.com/DamianDzi/watch-bridge)
+> aimed at the OnePlus Watch 2. The text below is still upstream's and describes what was
+> verified on upstream's hardware (OnePlus Watch 3); nothing is verified on the Watch 2 yet.
 
 **Free, open-source bridge between your Wear OS watch and your iPhone.**
 

@@ -79,7 +79,7 @@ struct StatusView: View {
                                         Image(systemName: "bell.badge.fill")
                                             .font(.system(size: 16))
                                             .foregroundColor(.green)
-                                        Text("WearBridge")
+                                        Text("Ranne")
                                             .font(.system(size: 6, weight: .medium))
                                             .foregroundColor(.white.opacity(0.7))
                                     }
@@ -111,7 +111,7 @@ struct StatusView: View {
                                 .fontWeight(.bold)
                                 .foregroundColor(.primary)
 
-                            Text("Never miss a call, message, or alert while your phone is across the room. WearBridge mirrors your iPhone notifications to your Wear OS watch in real time — directly over Bluetooth, with nothing leaving your devices.")
+                            Text("Never miss a call, message, or alert while your phone is across the room. Ranne mirrors your iPhone notifications to your Wear OS watch in real time — directly over Bluetooth, with nothing leaving your devices.")
                                 .font(.subheadline)
                                 .foregroundColor(.secondary)
                                 .lineSpacing(3)
@@ -270,7 +270,7 @@ struct StatusView: View {
                 }
             }
             .background(Color(.systemGroupedBackground))
-            .navigationTitle("WearBridge")
+            .navigationTitle("Ranne")
             .sheet(isPresented: $showFeatureSheet) {
                 FeatureDetailSheet()
             }
@@ -489,7 +489,7 @@ struct FeatureDetailSheet: View {
                 .padding(.top, 8)
             }
             .background(Color(.systemGroupedBackground))
-            .navigationTitle("WearBridge")
+            .navigationTitle("Ranne")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {

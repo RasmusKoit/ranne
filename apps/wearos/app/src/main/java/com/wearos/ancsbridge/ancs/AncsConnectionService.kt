@@ -61,13 +61,13 @@ class AncsConnectionService : ConnectionService() {
                 return
             }
             val handle = getPhoneAccountHandle(context)
-            val account = PhoneAccount.builder(handle, "WearBridge")
+            val account = PhoneAccount.builder(handle, "Ranne")
                 .setCapabilities(PhoneAccount.CAPABILITY_SELF_MANAGED)
                 .build()
 
             val telecomManager = context.getSystemService(TelecomManager::class.java)
             telecomManager.registerPhoneAccount(account)
-            Log.i(TAG, "Registered PhoneAccount for WearBridge")
+            Log.i(TAG, "Registered PhoneAccount for Ranne")
         }
 
         /**
